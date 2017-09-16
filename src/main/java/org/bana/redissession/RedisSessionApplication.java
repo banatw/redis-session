@@ -33,7 +33,7 @@ public class RedisSessionApplication {
 		}
 		
 		@PostMapping("/simpan")
-		public String simpan(@ModelAttribute FormModel formModel,HttpServletRequest req) {
+		public String simpan(FormModel formModel,HttpServletRequest req) {
 			req.getSession().setAttribute("nama", formModel.getNama());
 			req.getSession().setAttribute("alamat", formModel.getAlamat());
 			return "redirect:/hasil";
